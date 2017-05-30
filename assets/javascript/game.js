@@ -21,7 +21,7 @@
 
   		var reset = function() {
   			counter = 0;
-  			increment = numberOptions[Math.round(Math.random())];
+        guess = 0;
   		}
 
   		// On-click event that responds to button clicks of the crystal image
@@ -51,9 +51,6 @@
         // We'll then increment the counter each time by the randomly selected number.
         counter += 10;
 
-        console.log(counter);
-
-        $("#guess").text(counter);
 
         if (counter === targetNumber) {
           alert("You win!");
@@ -64,6 +61,12 @@
           alert("You lose!");
           reset();
         }
+
+
+        console.log(counter);
+
+        $("#guess").text(counter);
+
   });
 
       // On-click event that responds to button clicks of the third crystal image
@@ -72,10 +75,6 @@
         // We'll then increment the counter each time by the randomly selected number.
         counter += 7;
 
-        console.log(counter);
-
-        $("#guess").text(counter);
-
         if (counter === targetNumber) {
           alert("You win!");
           reset();
@@ -85,18 +84,20 @@
           alert("You lose!");
           reset();
         }
+
+
+        console.log(counter);
+
+        $("#guess").text(counter);
         });
 
       // On-click event that responds to button clicks of the fourth crystal image
       $("#val4").on("click", function() {
         
         // We'll then increment the counter each time by the randomly selected number.
-        counter += 5;
-
-        console.log(counter);
-
-        $("#guess").text(counter);
-
+       
+         counter += 5;
+         
         if (counter === targetNumber) {
           alert("You win!");
           reset();
@@ -106,6 +107,11 @@
           alert("You lose!");
           reset();
         }
+
+
+        console.log(counter);
+
+        $("#guess").text(counter);
         });
 
 
