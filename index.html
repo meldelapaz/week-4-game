@@ -4,36 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Crystal Game</title>
-	<link rel="stylesheet" href="assets/css/reset.css"
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
-<style>
-
-	h1 {
-		float: center;
-		color: white;
-		background-color: black;
-		padding: 5px;
-		margin: 3px;
-		text-align: center;
-	}
-
-	p {
-		float: center;
-		color: black;
-		background-color: gold;
-		padding: 5px;
-		margin: 3px;
-	}
-
-	span {
-		float: center;
-		color: white;
-		background-color: black;
-		margin: 3px;
-	}
-
-</style>
 
 
 <body>
@@ -51,10 +26,10 @@
 
 	<div id="crystals">
 
-		<img class="crystal-image" src="assets/images/pink.png" />
-		<img class="crystal-image" src="assets/images/blue.png" />
-		<img class="crystal-image" src="assets/images/silver.png" />
-		<img class="crystal-image" src="assets/images/yellow.png" />
+		<img class="crystal-image" id="val1" src="assets/images/pink.png" />
+		<img class="crystal-image" id="val2" src="assets/images/blue.png" />
+		<img class="crystal-image" id="val3" src="assets/images/silver.png" />
+		<img class="crystal-image" id="val4" src="assets/images/yellow.png" />
 
 	</div>
 
@@ -62,53 +37,8 @@
 
 
 
-  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  	<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-  	<script type="text/javascript">
-
-  		//Estalblished the "targetNumber" (set to a random number between 20 and 50)
-  		var targetNumber = 53;
-  		//Here we set the "number-to-guess" header to match the "targetNumber". This will later allow us to change the HTML to match the value in the JavaScript.
-  		$("#number-to-guess").text(targetNumber);
-
-  		var imageCrystal = $(".crystal-image");
-
-  		// Created a counter to track the user's total.
-  		var counter = 0;
-
-  		// Created a code that randomly selects one of these four numbers.
-  		var numberOptions = [10, 5, 3, 7];
-  		var increment = numberOptions[Math.round(Math.random())];
-
-  		var reset = function() {
-  			counter = 0;
-  			increment = numberOptions[Math.round(Math.random())];
-  		}
-
-  		// On-click event that responds to button clicks of the crystal image
-  		$(".crystal-image").on("click", function() {
-  			
-  			// We'll then increment the counter each time by the randomly selected number.
-  			counter += increment;
-
-  			console.log(counter);
-
-  			$("#guess").text(counter);
-
-  			if (counter === targetNumber) {
-  				alert("You win!");
-  				counter = 0;
-  				reset();
-  			}
-
-  			else if (counter >= targetNumber) {
-  				alert("You lose!");
-  				reset();
-  			}
-
-  		});
-
-  	</script>
 
 
 </body>

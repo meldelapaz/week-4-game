@@ -1,0 +1,23 @@
+h1 {
+		float: center;
+		color: white;
+		background-color: black;
+		padding: 5px;
+		margin: 3px;
+		text-align: center;
+	}
+
+	p {
+		float: center;
+		color: black;
+		background-color: gold;
+		padding: 5px;
+		margin: 3px;
+	}
+
+	span {
+		float: center;
+		color: white;
+		background-color: black;
+		margin: 3px;
+	}
