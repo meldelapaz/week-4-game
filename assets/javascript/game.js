@@ -8,7 +8,7 @@
   		// Created a counter to track the user's total.
   		var counter = 0;
 
-  		// Created a code that randomly selects one of these four numbers.
+  		// Created a code that randomly selects one of these four numbers, but this isn't actually being used because I couldn't figure out how to assign the values for a random crystal.
   		var numberOptions = [10, 5, 3, 7];
   		var increment = numberOptions[Math.round(Math.random())];
 
@@ -28,7 +28,7 @@
   		$("#val1").on("click", function() {
   			
   			// We'll then increment the counter each time by the randomly selected number.
-  			counter += increment;
+  			counter += 1;
 
   			console.log(counter);
 
@@ -43,13 +43,13 @@
   				alert("You lose!");
   				reset();
   			}
-
+});
 
       // On-click event that responds to button clicks of the second crystal image
       $("#val2").on("click", function() {
         
         // We'll then increment the counter each time by the randomly selected number.
-        counter += increment;
+        counter += 10;
 
         console.log(counter);
 
@@ -64,12 +64,13 @@
           alert("You lose!");
           reset();
         }
+  });
 
       // On-click event that responds to button clicks of the third crystal image
       $("#val3").on("click", function() {
         
         // We'll then increment the counter each time by the randomly selected number.
-        counter += increment;
+        counter += 7;
 
         console.log(counter);
 
@@ -84,12 +85,13 @@
           alert("You lose!");
           reset();
         }
+        });
 
       // On-click event that responds to button clicks of the fourth crystal image
       $("#val4").on("click", function() {
         
         // We'll then increment the counter each time by the randomly selected number.
-        counter += increment;
+        counter += 5;
 
         console.log(counter);
 
@@ -104,13 +106,7 @@
           alert("You lose!");
           reset();
         }
-
-
-});
-
-});
-  		});
-    });
+        });
 
 
 
