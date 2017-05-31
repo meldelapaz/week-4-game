@@ -27,12 +27,13 @@
   		// On-click event that responds to button clicks of the first crystal image
   		$("#val1").on("click", function() {
   			
-  			// We'll then increment the counter each time by the randomly selected number.
+  			// this updates the players total score
+        $("#guess").text(counter);
+        // We'll then increment the counter each time by the randomly selected number.
   			counter += 1;
         // this logs the value of each crystal after each click
   			console.log(counter);
-        // this updates the players total score
-  			$("#guess").text(counter);
+
         // this alerts the player if they have won and resets the game
   			if (counter === targetNumber) {
   				alert("You win!");
@@ -49,6 +50,9 @@
       $("#val2").on("click", function() {
         
         // We'll then increment the counter each time by the randomly selected number.
+
+      $("#guess").text(counter);
+
         counter += 10;
 
         if (counter === targetNumber) {
@@ -63,7 +67,7 @@
 
         console.log(counter);
 
-        $("#guess").text(counter);
+        
 
   });
 
@@ -73,6 +77,8 @@
         // We'll then increment the counter each time by the randomly selected number.
         counter += 7;
 
+        $("#guess").text(counter);
+
         if (counter === targetNumber) {
           alert("You win!");
           reset();
@@ -85,7 +91,7 @@
 
         console.log(counter);
 
-        $("#guess").text(counter);
+        
         });
 
       // On-click event that responds to button clicks of the fourth crystal image
@@ -95,6 +101,8 @@
        
          counter += 5;
 
+         $("#guess").text(counter);
+
         if (counter === targetNumber) {
           alert("You win!");
           reset();
@@ -108,7 +116,7 @@
 
         console.log(counter);
 
-        $("#guess").text(counter);
+        
         });
 
 
